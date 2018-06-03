@@ -1,0 +1,6 @@
+log:
+  format: '%(asctime)s - %(levelname)s - %(name)s - %(message)s'
+  filename: /opt/logs/admin-menu/admin-menu.log
+  maxBytes: 1024
+  backupCount: 3
+  level: DEBUG
