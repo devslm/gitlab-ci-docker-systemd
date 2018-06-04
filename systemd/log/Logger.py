@@ -21,7 +21,7 @@ class Logger:
 
     @staticmethod
     def loadLoggerConfigData():
-        with open("config/logging-config.yml", 'r') as loggerConfigStream:
+        with open("systemd/config/logging-config.yml", 'r') as loggerConfigStream:
             Logger.loggerConfigData = yaml.load(loggerConfigStream)
 
     @staticmethod
