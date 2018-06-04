@@ -1,4 +1,4 @@
-#!/opt/projects/gitlab-docker-systemd/venv/bin/python
+#!/opt/projects/gitlab-ci-docker-systemd/venv/bin/python
 
 # -*- coding: utf-8 -*-
 import re
