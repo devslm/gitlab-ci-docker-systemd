@@ -1,6 +1,7 @@
 #!/usr/bin/env python
 import logging
 import os
+from pathlib import Path
 
 import yaml
 
@@ -21,7 +22,10 @@ class Logger:
 
     @staticmethod
     def loadLoggerConfigData():
-        with open("systemd/config/logging-config.yml", 'r') as loggerConfigStream:
+        configPath = Path("systemd/config/")
+        configFile = configPath / "logging-config.yml"
+
+        with configFile.open() as loggerConfigStream:
             Logger.loggerConfigData = yaml.load(loggerConfigStream)
 
     @staticmethod

@@ -1,6 +1,7 @@
 #!/usr/bin/env python
 
 import argparse
+import traceback
 
 from systemd.docker.Docker import Docker
 from systemd.log.Logger import Logger
@@ -82,5 +83,7 @@ if __name__ == '__main__':
         app.run(args)
     except Exception as exception:
         logger.error("Fatal error occurred! Reason: %s!", exception)
+
+        traceback.print_exc()
 
         exit(1)

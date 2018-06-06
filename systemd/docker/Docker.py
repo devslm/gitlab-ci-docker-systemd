@@ -87,7 +87,7 @@ class Docker:
             dataContainerPath
         )
 
-        with open(dataOriginalPath, 'r') as dataStream:
+        with open(dataOriginalPath, 'rb') as dataStream:
             # put_archive() required exists folder so create before
             self.executeCommand(dockerContainer, ["mkdir -p %s" % dataContainerPath])
 
@@ -103,6 +103,8 @@ class Docker:
             raise ValueError("Could not execute shell command! Command list is empty!")
 
         for shellCommand in shellCommandsList:
+            self.logger.debug("Exec command: %s" % shellCommand)
+
             exitCode, stdout = dockerContainer.exec_run(shellCommand)
 
             if (0 == exitCode

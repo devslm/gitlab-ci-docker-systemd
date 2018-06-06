@@ -1,4 +1,4 @@
-#!/opt/projects/gitlab-ci-docker-systemd/venv/bin/python
+#!/opt/projects/gitlab-ci-docker-systemd/venv/bin/python2
 
 import argparse
 import code
