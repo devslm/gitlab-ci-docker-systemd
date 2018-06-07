@@ -93,7 +93,6 @@ PyAPI_FUNC(int) _PySet_NextEntry(PyObject *set, Py_ssize_t *pos, PyObject **key,
 PyAPI_FUNC(PyObject *) PySet_Pop(PyObject *set);
 PyAPI_FUNC(int) _PySet_Update(PyObject *set, PyObject *iterable);
 
-PyAPI_FUNC(void) _PySet_DebugMallocStats(FILE *out);
 #ifdef __cplusplus
 }
 #endif

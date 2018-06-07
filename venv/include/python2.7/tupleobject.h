@@ -54,7 +54,7 @@ PyAPI_FUNC(void) _PyTuple_MaybeUntrack(PyObject *);
 #define PyTuple_SET_ITEM(op, i, v) (((PyTupleObject *)(op))->ob_item[i] = v)
 
 PyAPI_FUNC(int) PyTuple_ClearFreeList(void);
-PyAPI_FUNC(void) _PyTuple_DebugMallocStats(FILE *out);
+
 #ifdef __cplusplus
 }
 #endif
