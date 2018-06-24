@@ -24,4 +24,4 @@ python main.py \
   --exec-commands "touch /opt/example.log" "{bash} ls -la /opt" "mkdir -p /opt/tmp" # the list of bash commands separated by whitespace
 ```
 
-Special keyword {bash} at start of the command is short version version of the real command /bin/bash -c "command" when your command must bu run under bash.
+Special keyword {bash} at start of the command is short version of the real command /bin/bash -c "command" when your command must be run under bash.
