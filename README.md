@@ -6,6 +6,7 @@ Script allows to execute docker with systemd in Gitlab CI Runner
 ###### Article about problem here: [habr](https://habr.com/post/413375/)
 
 ##### Starting
+```
 git clone https://github.com/seregaSLM/gitlab-ci-docker-systemd.git
 cd <path-with-code>
 pip install virtualenv
@@ -21,5 +22,6 @@ python main.py \
   [--data-unarchive-path] /opt/data/logs # unarchive path in the destionation container, it will be created if not exists
   [--privileged] # for systemd running is required, other low priority running varinats I don't use
   --exec-commands "touch /opt/example.log" "{bash} ls -la /opt" "mkdir -p /opt/tmp" # the list of bash commands separated by whitespace
-  
+```
+
 Special keyword {bash} at start of the command is short version version of the real command /bin/bash -c "command" when your command must bu run under bash.
